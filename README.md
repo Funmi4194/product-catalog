@@ -30,3 +30,7 @@ Each sorting algorithm is implemented as its own type that satisfies the `SortTy
 type SortType interface {
     Sort([]Product) []Product
 }
+
+You can easily create a new sorter:
+type ByCreated struct{}
+func (s ByCreated) Sort(products []Product) []Product { ... }
