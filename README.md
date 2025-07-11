@@ -30,7 +30,34 @@ Each sorting algorithm is implemented as its own type that satisfies the `SortTy
 type SortType interface {
     Sort([]Product) []Product
 }
+```
 
 You can easily create a new sorter:
+
+```go
 type ByCreated struct{}
 func (s ByCreated) Sort(products []Product) []Product { ... }
+```
+
+
+### Service Layer
+```go
+service.SortProducts(products, sorter.ByPrice{})
+```
+
+## 🧪 Run Tests
+go test ./... -v
+
+
+
+## 📦 Installation
+```go
+git clone https://github.com/funmi4194/product-catalog.git
+cd product-catalog
+go mod tidy
+go run main.go
+```
+
+
+🙋🏽‍♂️ Author
+Funmi
