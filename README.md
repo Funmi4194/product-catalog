@@ -46,8 +46,9 @@ service.SortProducts(products, sorter.ByPrice{})
 ```
 
 ## 🧪 Run Tests
+```go
 go test ./... -v
-
+```
 
 
 ## 📦 Installation
