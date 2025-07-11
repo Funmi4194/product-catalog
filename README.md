@@ -6,7 +6,7 @@ An extensible product sorting solution built in **Go**, designed for dynamic ord
 
 ---
 
-## 🚀 Features
+## Worked on Features
 
 - ✅ Sort by **price** or **conversion rate** (sales/views)
 - ✅ Follows the **Strategy Pattern** for easy extension
@@ -16,3 +16,17 @@ An extensible product sorting solution built in **Go**, designed for dynamic ord
 - ✅ Clear project architecture (no import cycles)
 
 ---
+
+
+---
+
+## 🧠 Design Principles
+
+### Strategy Pattern
+
+Each sorting algorithm is implemented as its own type that satisfies the `SortType` interface:
+
+```go
+type SortType interface {
+    Sort([]Product) []Product
+}
